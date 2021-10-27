@@ -1,0 +1,116 @@
+/* Generell Styling Start */
+
+body{
+margin: 0;
+background-color: rgb(241, 241, 241);
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Generell Styling End */
+
+/* Galeri Start */
+
+
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+header h1{
+    margin: 0;
+}
+
+#logo{
+    position: fixed;
+    height: 60px;
+    left: 10px;
+}
+
+.info-section{
+    background-color: #a4a4a4;
+    margin: 5px 10px;
+    text-align: center;
+    padding: 15px;
+    color: black;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+border-radius: 5px;
+}
+
+.galeri-section{
+    background-color: #3E3E3E;
+    margin: 5px;
+    padding: 30px 10px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 5px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+
+.galeri-section img{
+    object-fit: cover;
+    width: 90px;
+    height: 70px;
+    margin: 10px;
+}
+
+footer{
+    background-color: #FFFF00;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer i{
+    margin: 0 50px;
+    transform: scale(2.5);    
+}
+
+@media  screen and (min-width: 500px) {
+
+
+    #logo{
+        height: 90px ;
+    }
+
+    .info-section {
+        margin: 10px 20vw;
+    }
+
+    .galeri-section{
+        margin: 10px 20px;
+
+        display: grid;
+        grid-template-columns: 20% 10% 10% 10% 20% ;
+       grid-gap: 30px ;
+
+    }
+    .galeri-section img{
+        margin: 20px;
+        width: 100%;
+        height: fit-content;
+        align-self: center;
+    }
+
+
+
+}
+
+
+/* Galeri End */
