@@ -1,11 +1,11 @@
 /* Generell Styling Start */
 
-body{
-margin: 0;
-background-color: rgb(241, 241, 241);
+body {
+    margin: 0;
+    background-color: rgb(241, 241, 241);
 }
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -13,104 +13,219 @@ h1{
 
 /* Generell Styling End */
 
+/* navigerings bar */
+.nav-container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 40px;
+    height: 6px;
+    background-color: rgb(239, 255, 13);
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-left: 15px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* navigerings bar end */
+
+/* index */
+
+/*header & information */
+#index-image img {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+}
+
+.card-header {
+    margin-top: 10px white;
+}
+
+.card-information-section {
+    padding: 10px 25%;
+    background-color: #e2e2e2;
+}
+.card-information-section,
+p {
+    text-align: center;
+    font-size: 24px;
+}
+/*header & information end*/
+
+/* card section */
+.card-section {
+    background-color: #3e3e3e;
+}
+.card-container {
+    padding: 2rem 2em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px 30px;
+}
+/*the card */
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    align-content: stretch;
+    cursor: pointer;
+}
+
+.card h4 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card .overlay {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    opacity: 1;
+    color: white;
+}
+
+/* flip card*/
+
+.inner-card {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.inner-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* card end */
+/* index end*/
+
 /* Galeri Start */
 
-
-
-header{
+header {
+    /* using same base kod // nelly*/
     background-color: black;
     color: white;
     text-align: center;
     margin: 0;
     padding: 15px;
 }
-header h1{
+header h1 {
     margin: 0;
 }
 
-#logo{
+#logo {
     position: fixed;
     height: 60px;
     left: 10px;
 }
 
-.info-section{
+.info-section {
     background-color: #a4a4a4;
     margin: 5px 10px;
     text-align: center;
     padding: 15px;
     color: black;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-border-radius: 5px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border-radius: 5px;
 }
 
-.galeri-section{
-    background-color: #3E3E3E;
+.galeri-section {
+    background-color: #3e3e3e;
     margin: 5px;
     padding: 30px 10px;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
     border-radius: 5px;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-
 }
 
-
-.galeri-section img{
+.galeri-section img {
     object-fit: cover;
     width: 90px;
     height: 70px;
     margin: 10px;
 }
 
-footer{
-    background-color: #FFFF00;
+footer {
+    background-color: #ffff00;
     padding: 20px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-footer i{
+footer i {
     margin: 0 50px;
-    transform: scale(2.5);    
+    transform: scale(2.5);
 }
 
-@media  screen and (min-width: 500px) {
-
-
-    #logo{
-        height: 90px ;
+@media screen and (min-width: 500px) {
+    #logo {
+        height: 90px;
     }
 
     .info-section {
         margin: 10px 20vw;
     }
 
-    .galeri-section{
+    .galeri-section {
         margin: 10px 20px;
 
         display: grid;
-        grid-template-columns: 20% 10% 10% 10% 20% ;
-       grid-gap: 30px ;
-
+        grid-template-columns: 20% 10% 10% 10% 20%;
+        grid-gap: 30px;
     }
-    .galeri-section img{
+    .galeri-section img {
         margin: 20px;
         width: 100%;
         height: fit-content;
         align-self: center;
     }
-
-
-
 }
-
 
 /* Galeri End */
