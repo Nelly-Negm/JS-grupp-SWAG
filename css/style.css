@@ -98,6 +98,16 @@ p {
     cursor: pointer;
 }
 
+.card,
+#front {
+    background-color: grey;
+}
+
+.card,
+#back {
+    background-color: yellow;
+}
+
 .card:hover {
     transform: scale(1.06);
 }
@@ -244,30 +254,29 @@ footer i {
     cursor: pointer;
 }
 
-#prev-btn, #next-btn{
-position: absolute;
-background-color: yellow;
-top: 50%;
-cursor: pointer;
-padding: 5px;
-color: red;
-transform: scale(1.4,1.4);
+#prev-btn,
+#next-btn {
+    position: absolute;
+    background-color: yellow;
+    top: 50%;
+    cursor: pointer;
+    padding: 5px;
+    color: red;
+    transform: scale(1.4, 1.4);
 }
-#prev-btn :hover, #next-btn :hover{
+#prev-btn :hover,
+#next-btn :hover {
     background-color: red;
     color: yellow;
     transition-duration: 0.5s;
-
 }
-#prev-btn{
-left: 5.5%;
-}
-
-#next-btn{
-right: 5.5%;
+#prev-btn {
+    left: 5.5%;
 }
 
-
+#next-btn {
+    right: 5.5%;
+}
 
 /* Modal End */
 
