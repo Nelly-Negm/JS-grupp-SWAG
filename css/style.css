@@ -122,6 +122,7 @@ header h1 {
     position: fixed;
     height: 60px;
     left: 10px;
+    z-index: 0;
 }
 
 .info-section {
@@ -166,6 +167,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 footer i {
     margin: 0 50px;
@@ -206,6 +208,7 @@ footer i {
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .modal-container {
@@ -240,6 +243,31 @@ footer i {
     object-fit: contain;
     cursor: pointer;
 }
+
+#prev-btn, #next-btn{
+position: absolute;
+background-color: yellow;
+top: 50%;
+cursor: pointer;
+padding: 5px;
+color: red;
+transform: scale(1.4,1.4);
+}
+#prev-btn :hover, #next-btn :hover{
+    background-color: red;
+    color: yellow;
+    transition-duration: 0.5s;
+
+}
+#prev-btn{
+left: 5.5%;
+}
+
+#next-btn{
+right: 5.5%;
+}
+
+
 
 /* Modal End */
 
