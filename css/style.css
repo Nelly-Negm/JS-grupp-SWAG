@@ -50,7 +50,7 @@ h1 {
 
 /* index */
 
-/*header & information */
+/*header  */
 #index-image img {
     height: 300px;
     background-position: center;
@@ -58,21 +58,24 @@ h1 {
     object-fit: cover;
     position: relative;
 }
-
-.card-header {
-    margin-top: 10px white;
+/*information */
+.information-headline {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-.card-information-section {
+.information-section {
     padding: 10px 25%;
     background-color: #e2e2e2;
 }
-.card-information-section,
+.information-section,
 p {
     text-align: center;
     font-size: 24px;
 }
-/*header & information end*/
+/*header end*/
 
 /* card section */
 .card-section {
@@ -91,48 +94,13 @@ p {
     width: 300px;
     height: 400px;
     background-color: white;
-    display: flex;
-    align-items: flex-end;
-    align-content: stretch;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.card h4 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
+.card:hover {
+    transform: scale(1.06);
 }
-
-.card .overlay {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
-    opacity: 1;
-    color: white;
-}
-
-/* flip card*/
-
-.inner-card {
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-}
-
-.inner-card.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.card-face {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-}
-
 /* card end */
 /* index end*/
 
