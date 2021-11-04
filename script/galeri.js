@@ -51,14 +51,9 @@ Jag skulle även kunna gämföra med images[i].name, men den heter annorlunda.
 Console.logar ut vad de olika kännorna visar när man klickar på förgående bild knappen på hemsidan. 
 */
 const prevBtnFunction = () => {
-
-    console.log(mainImg.src)
-    console.log(pictures[0].src)
-    console.log(images[0].name)
-
      for (let i = 0; i < pictures.length; i++){
-            if (mainImg.src === pictures.src) {
-                document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i + 1].name}">`
+            if (mainImg.src === pictures[i].src) {
+                document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i - 1].name}">`
             }
         }
    } 
