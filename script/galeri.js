@@ -45,15 +45,21 @@ const pictures = document.querySelectorAll(".modal-img");
 
 
 /*
-PROBLEM: Jag vill gämföra mainImg.src och pictures.src för att identifiera vilken bild som visas för att sedan kunna byta bild.
-problemet är att de har olika källor, mainImg har källa till html filen och pictures till min img mapp. 
-Jag skulle även kunna gämföra med images[i].name, men den heter annorlunda. 
-Console.logar ut vad de olika kännorna visar när man klickar på förgående bild knappen på hemsidan. 
+ANNAT PROBLEM: Att skriva in [i] var ej lösningen. Jag fann lösningen för förra problemet genom att ändra vad pictures[i].src
+skulle vara lika med, så nu aktiveras if satsen. Men mitt nya problem är att loopen slutar ju inte köra för att ifsatsen går igenom
+vilket för att i blir lika med lika många bilder jag har, så den hoppar till sista bilden. Dessutom får jag error när jag försöker 
+skriva [i - 1]  
 */
 const prevBtnFunction = () => {
+
+    console.log(mainImg.src)
+    console.log(pictures[0].src)
+    console.log(`file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[0].name}`)
+
      for (let i = 0; i < pictures.length; i++){
-            if (mainImg.src === pictures[i].src) {
-                document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i - 1].name}">`
+            if (pictures[i].src === `file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[i].name}`) {
+            document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i /* - 1 */].name}">`
+            console.log(i)
             }
         }
    } 
