@@ -40,8 +40,9 @@ const closeModal = () => {
     document.querySelector("#modal-wrapper").style.display="none"
 }
 
+const pictures = document.querySelectorAll(".modal-img");
+
 const openModal = () => {
-    const pictures = document.querySelectorAll(".modal-img");
     for (let i = 0; i < pictures.length; i++){
         pictures[i].addEventListener("click", () => {
             document.querySelector("#modal-wrapper").style.display="flex"; 
@@ -60,3 +61,19 @@ openModal()
 
 
 // Modal end
+
+//Set main image
+
+const setMainImage = (src) => {
+    document.querySelector("#main-img").setAttribute("src", src)
+}
+
+const mainImg = document.getElementById("main-img")
+
+const prevImage = () => {
+    for (let i = 0; i < pictures.length; i++){
+        if (pictures[i].src === mainImg.src){
+            mainImg.setAttribute("src", images[i -= 1].src);
+        }
+    }
+}
