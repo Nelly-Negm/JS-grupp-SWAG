@@ -139,7 +139,12 @@ p {
 /*header end*/
 
 /* card section */
-.wrapper {
+.card-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-wrapper {
     background-color: #585858;
     padding: 2rem 2em;
     display: flex;
@@ -148,7 +153,7 @@ p {
     justify-content: space-evenly;
     gap: 50px 30px;
 }
-.container {
+.card-container {
     width: 50%;
     display: flex;
     justify-content: center;
