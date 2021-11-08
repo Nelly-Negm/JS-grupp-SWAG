@@ -36,34 +36,21 @@ const images  = [
     },
 ]
 
-//Prev next btn
 const mainImg = document.getElementById("main-img")
-// I inner HTML, i if satsen till modalen, lägger jag till ett element med id "main-img"
-
 const pictures = document.querySelectorAll(".modal-img");
 
 
-
-/*
-ANNAT PROBLEM: Att skriva in [i] var ej lösningen. Jag fann lösningen för förra problemet genom att ändra vad pictures[i].src
-skulle vara lika med, så nu aktiveras if satsen. Men mitt nya problem är att loopen slutar ju inte köra för att ifsatsen går igenom
-vilket för att i blir lika med lika många bilder jag har, så den hoppar till sista bilden. Dessutom får jag error när jag försöker 
-skriva [i - 1]  
-*/
 const prevBtnFunction = () => {
-
-    console.log(mainImg.src)
-    console.log(pictures[0].src)
-    console.log(`file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[0].name}`)
-
      for (let i = 0; i < pictures.length; i++){
-            if (pictures[i].src === `file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[i].name}`) {
-            document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i /* - 1 */].name}">`
-            console.log(i)
+            if (pictures[i].src === document.querySelector("#main-img").src) {
+            document.querySelector("#main-img").setAttribute("src", pictures[i -= 1].src );
             }
         }
    } 
 
+   const nextBtnFunction = () => {
+       
+   }
 
 
 const closeModal = () => {
