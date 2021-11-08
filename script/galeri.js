@@ -42,14 +42,25 @@ const pictures = document.querySelectorAll(".modal-img");
 
 const prevBtnFunction = () => {
      for (let i = 0; i < pictures.length; i++){
-            if (pictures[i].src === document.querySelector("#main-img").src) {
-            document.querySelector("#main-img").setAttribute("src", pictures[i -= 1].src );
+            if (pictures[i].src === document.querySelector("#main-img").src && i !== 0) {
+            document.querySelector("#main-img").setAttribute("src", pictures[i -= 1].src);
+            console.log(i)
+
+            } else if (pictures[i].src === document.querySelector("#main-img").src && i === 0) {
+            document.querySelector("#main-img").setAttribute("src", pictures[i += pictures.length - 1].src)
             }
         }
    } 
 
    const nextBtnFunction = () => {
-       
+       for (let i = 0; i < pictures.length; i++) {
+        if (pictures[i].src === document.querySelector("#main-img").src && i !== 0)  {
+            document.querySelector("#main-img").setAttribute("src", pictures[i += 1].src);
+// HJÄLP - har skrivit samma som i i portfolio
+        } else if (pictures[i].src === document.querySelector("main-img").src && i === pictures.length - 1 ) {
+            document.querySelector("#main-img").setAttribute("src", pictures[0].src);
+        }
+    }
    }
 
 

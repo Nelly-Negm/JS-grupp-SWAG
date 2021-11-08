@@ -1,5 +1,9 @@
 /* Generell Styling Start */
 
+*{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: rgb(241, 241, 241);
