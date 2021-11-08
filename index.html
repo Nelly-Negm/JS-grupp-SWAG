@@ -1,58 +1,107 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWAG JS</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" type="image/png" href="./img/swag_logo_vector_02.svg">
-    <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
-    <script src="/script/main.js"></script>
-    <script src="/script/app.js"></script>
-</head>
-<body>
-    <!--navigation bar-->
-    <header>
-        <div class="nav-container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SWAG JS</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="./img/swag_logo_vector_02.svg"
+        />
+        <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
+        <script src="/script/main.js"></script>
+        <script src="/script/app.js"></script>
+    </head>
+    <body>
+        <!--navigation bar-->
+        <header class=".nav-container">
+            <nav class="link-wrapper">
+                <a href="#Home">Home</a>
+                <a href="#information-section">Information</a>
+                <a href="#gallery">Gallery</a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
         </header>
-<!--end navigation bar-->
+        <div class="mobile-menu">
+            <nav class="mobile-link-wrapper">
+                <a class="mobile-link" href="#Home">Home</a>
+                <a class="mobile-link" href="#information-section"
+                    >Information</a
+                >
+                <a class="mobile-link" href="#gallery">Gallery</a>
+            </nav>
+        </div>
+        <!--end navigation bar-->
 
-    <!--top image-->
-    <section id="index-image">
-<img src="/img/image00010.jpeg" alt="parkour jump low angle" width="100%">
-    </section>
-<!--end top image-->
+        <!--top image-->
+        <section id="index-image">
+            <img
+                src="/img/image00010.jpeg"
+                alt="parkour jump low angle"
+                width="100%"
+            />
+        </section>
+        <!--end top image-->
 
-<!--information container-->
-<section class="information-headline">
-    <h1>Vem är vi?</h1>
-</section>
+        <!--information container-->
+        <section class="information-headline">
+            <h1>Vem är vi?</h1>
+        </section>
 
-<section class="information-section">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sint deleniti totam placeat mollitia quasi omnis ad exercitationem quibusdam magnam aliquid, beatae iste harum sapiente earum. Sed tenetur quos sequi.</p>
-</section>
+        <section class="information-section">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officia sint deleniti totam placeat mollitia quasi omnis ad
+                exercitationem quibusdam magnam aliquid, beatae iste harum
+                sapiente earum. Sed tenetur quos sequi.
+            </p>
+        </section>
+        <!-- Card Section-->
+        <section class="card-section">
+            <!--mobile cards-->
+            <section class="card-wrapper">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="sneaker">
+                            <img src="./img/648704-middle.png" alt="adidas" />
+                        </div>
+                        <div class="info">
+                            <h1 class="title">Sammy Boy</h1>
+                            <h3>Parkoure teacher and Master</h3>
 
-<!--cards-->
-<section class="card-section">
-<div class="card-container">
-<div class="card-wrapper">
-    <div class="card-flipper">
-        <div class="card " id="front" onclick="card-flip"></div>
-        <div class="card" id="back" onclick="card-flip"></div>
-    </div>
+                            <div class="purchase">
+                                <button>Whant to get to know me?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-</div>
-</div>
-</section>
-<!--end cart container-->
-<footer>
-    <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-</footer>
-</body> 
+                <div class="card-container">
+                    <div class="card">
+                        <div class="sneaker">
+                            <img src="./img/648704-middle.png" alt="adidas" />
+                        </div>
+                        <div class="info">
+                            <h1 class="title">Sammy Boy</h1>
+                            <h3>Parkoure teacher and Master</h3>
+
+                            <div class="purchase">
+                                <button>Whant to get to know me?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- end desktopCard Section-->
+        <footer>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </footer>
+    </body>
 </html>

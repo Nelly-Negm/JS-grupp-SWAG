@@ -20,11 +20,11 @@ h1 {
     position: fixed;
     z-index: 1;
     margin-top: 10px;
+    top: 0;
+    right: 0;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.mobile-link {
     width: 40px;
     height: 6px;
     background-color: rgb(239, 255, 13);
@@ -33,22 +33,83 @@ h1 {
     margin-left: 15px;
 }
 
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+@media screen and (max-width: 800px) {
+    .link-wrapper {
+        display: none;
+    }
+    .nav-container {
+        padding-right: 10px;
+        padding-left: 20px;
+        padding-left: 5;
+    }
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+    }
+    .menu-btn-burger {
+        width: 40px;
+        height: 4px;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+    .menu-btn-burger::before,
+    .menu-btn-burger::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+
+    .menu-btn-burger::before {
+        transform: translateY(-10px);
+    }
+
+    .menu-btn-burger::after {
+        transform: translateY(10px);
+    }
+    .menu-btn.open .menu-btn-burger {
+        transform: rotate(180deg);
+        background-color: transparent;
+    }
+    .menu-btn.open .menu-btn-burger::before {
+        transform: rotate(45deg);
+    }
+    .menu-btn.open .menu-btn-burger::after {
+        transform: rotate(-45deg);
+    }
+    .mobile-menu {
+        height: calc(100vh - 80px);
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        right: -100%;
+        margin-top: 80px;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .mobile-link-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mobile-link {
+        margin: 10px;
+        font-size: 25px;
+    }
 }
 
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
 /* navigerings bar end */
-
-/* index */
 
 /*header  */
 #index-image img {
@@ -79,9 +140,12 @@ p {
 
 /* card section */
 .card-section {
-    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card-wrapper {
+    background-color: #585858;
     padding: 2rem 2em;
     display: flex;
     flex-flow: row wrap;
@@ -89,30 +153,65 @@ p {
     justify-content: space-evenly;
     gap: 50px 30px;
 }
-/*the card */
+.card-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card {
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    transition: 0.5s;
+    background-color: aliceblue;
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 1), 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+.sneaker {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sneaker img {
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.info h1 {
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+    text-align: center;
+}
+.info h3 {
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+    text-align: center;
+}
+
+.purchase {
+    margin-top: 5rem;
+    transition: all 0.75s ease-out;
+    margin-bottom: 5rem;
+}
+.purchase button {
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #eeff00;
+    border: none;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
 }
 
-.card,
-#front {
-    background-color: grey;
-}
-
-.card,
-#back {
-    background-color: yellow;
-}
-
-.card:hover {
-    transform: scale(1.06);
-}
-/* card end */
-/* index end*/
+/* end card*/
 
 /* Galeri Start */
 
@@ -183,7 +282,16 @@ footer i {
     margin: 0 50px;
     transform: scale(2.5);
 }
-
+/*Display none on Card and burger manu to make room for deskop versen */
+@media screen and (min-width: 800px) {
+    .mobile-logo,
+    .menu-btn,
+    .mobile-menu,
+    .flip-card {
+        display: none;
+    }
+}
+/* end changes on mobile */
 @media screen and (min-width: 500px) {
     #logo {
         height: 90px;
