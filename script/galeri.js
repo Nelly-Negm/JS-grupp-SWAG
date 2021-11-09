@@ -51,20 +51,29 @@ vilket för att i blir lika med lika många bilder jag har, så den hoppar till 
 skriva [i - 1]  
 */
 const prevBtnFunction = () => {
-
     console.log(mainImg.src)
-    console.log(pictures[0].src)
-    console.log(`file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[0].name}`)
-
      for (let i = 0; i < pictures.length; i++){
-            if (pictures[i].src === `file:///C:/Users/User/Desktop/Grupp%20upp%20JavaScript/JS-grupp-SWAG/img/${images[i].name}`) {
-            document.querySelector("#modal-content").innerHTML = `<img id="main-img" src="../img/${images[i /* - 1 */].name}">`
-            console.log(i)
+            if (pictures[i].src === mainImg.src && i !== 0) {
+                console.log(i)
+            mainImg.setAttribute("src", pictures[i -= 1].src)
+            } else if (pictures[i].src === mainImg.src && i === 0) {
+                mainImg.setAttribute("src", pictures[i += pictures.length - 1].src)            
             }
         }
    } 
 
+   const nextBtnFunction = () => {
+        console.log(mainImg.src)
+         for (let i = 0; i < pictures.length; i++){
+                if (pictures[i].src === mainImg.src && i !== pictures.length - 1) {
+                mainImg.setAttribute("src", pictures[i += 1].src)
+                } else if (pictures[i].src === mainImg.src && i === pictures.length - 1) {
+                mainImg.setAttribute("src", pictures[0].src)
+                }
+            }
+       } 
 
+   console.log(mainImg.src)
 
 const closeModal = () => {
     document.querySelector("#modal-wrapper").style.display="none"
@@ -82,8 +91,7 @@ const openModal = () => {
         for (let j = 0; j < images.length; j++) {
             
             if (i === j){
-                document.querySelector("#modal-content")
-                .innerHTML = `<img id="main-img" src="../img/${images[j].name}">`
+                mainImg.setAttribute("src", `../img/${images[j].name}`)
             }
         }
         })

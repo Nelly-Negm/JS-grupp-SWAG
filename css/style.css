@@ -301,6 +301,10 @@ header {
     padding: 15px;
 }
 
+.link-wrapper-galeri{
+    position: relative;
+}
+
 header h1 {
     margin: 0;
 }
