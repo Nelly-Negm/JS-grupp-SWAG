@@ -139,12 +139,8 @@ p {
 /*header end*/
 
 /* card section */
-.card-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card-wrapper {
+
+.wrapper {
     background-color: #585858;
     padding: 2rem 2em;
     display: flex;
@@ -153,7 +149,7 @@ p {
     justify-content: space-evenly;
     gap: 50px 30px;
 }
-.card-container {
+.container {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -163,20 +159,21 @@ p {
     background-color: aliceblue;
     transform-style: preserve-3d;
     min-height: 80vh;
-    width: 35rem;
+    width: 400px;
     border-radius: 30px;
     padding: 0rem 5rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 1), 0px 0px 50px rgba(0, 0, 0, 1);
 }
 
-.sneaker {
+.profile {
     min-height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.sneaker img {
-    width: 20rem;
+.profile,
+img {
+    width: 10rem;
     z-index: 2;
     transition: all 0.75s ease-out;
 }
@@ -195,12 +192,11 @@ p {
     text-align: center;
 }
 
-.purchase {
-    margin-top: 5rem;
+.get-to-know-me {
     transition: all 0.75s ease-out;
     margin-bottom: 5rem;
 }
-.purchase button {
+.get-to-know-me button {
     width: 100%;
     padding: 1rem 0rem;
     background: #eeff00;
