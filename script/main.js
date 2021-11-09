@@ -12,8 +12,11 @@ const profile = document.querySelector(".profile img"); //target the image to ma
 cards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
         //traking the mouse to rotate the card in different ddirections
-        let xAxis = (window.innerWidth / 1 - e.pageX) / 25;
-        let yAxis = (window.innerHeight / 1 - e.pageY) / 25;
+        //The yAxel is doing a x25 per card instead of doing a break...
+        let xAxis = 0;
+        let yAxis = 0;
+        xAxis = (window.innerWidth / 1 - e.pageX) / 25;
+        yAxis = (window.innerHeight / 1 - e.pageY) / 25;
         card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`; // y and X axel is horesental and vertikal
     });
     card.addEventListener("mouseenter", (e) => {
@@ -32,8 +35,8 @@ cards.forEach((card) => {
 });
 
 //service-modal  Card code
-const services = [
-    //the pop up information that will be showd
+//a arraywith information that will be shownd when "openCardModal" is no longer display: "none".
+const funQuote = [
     {
         name: "Sammy Boy",
         content: "i like long walk on the beach, and whisky on the rock",
@@ -51,30 +54,30 @@ const services = [
         content: "YOU CANT HANDLE THE THRUTH",
     },
 ];
-
-const closeServiceModal = () => {
-    document.getElementById("service-modal-wrapper").style.display = "none"; //tagging that the modal will defalt not be shownd
+//tagging that the modal will defalt not be shownd
+const closeCardModal = () => {
+    document.getElementById("card-modal-wrapper").style.display = "none";
 };
 
-/* börjar med att ha min modal i display none
-och sen när man klickar på den gula knappen börjar modal göra en for loop
-där den tar informationen från "servis" array
-och numreriskt tar upp modalen beroende vilket kort det är   */
-const openServiceModal = () => {
+/* when you click on the yellow button a modal startss to do a  for loop
+were it counts witch card it is incomparison to the  arrey elemnt in "funQuote"
+and if for exampel it is, card nr 2, so will the array element stop on the nr 1 
+and run the  "card-modal-content" seqence.  */
+const openCardModal = () => {
     const cards = document.getElementsByClassName("get-to-know-me");
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", () => {
-            document.getElementById("service-modal-wrapper").style.display =
+            document.getElementById("card-modal-wrapper").style.display =
                 "flex";
-            for (let j = 0; j < services.length; j++) {
+            for (let j = 0; j < funQuote.length; j++) {
                 if (i === j) {
                     document.getElementById(
-                        "service-modal-content"
-                    ).innerHTML = `<h2>${services[j].name}</h2><p>${services[j].content}</p>`;
+                        "card-modal-content"
+                    ).innerHTML = `<h2>${funQuote[j].name}</h2><p>${funQuote[j].content}</p>`;
                 }
             }
         });
     }
 };
 
-window.addEventListener("load", openServiceModal);
+window.addEventListener("load", openCardModal);
