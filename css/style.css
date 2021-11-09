@@ -152,6 +152,7 @@ p {
     perspective: 1000px;
     background-color: #585858;
 }
+
 .wrapper {
     padding: 2rem 2em;
     display: flex;
