@@ -16,7 +16,7 @@ cards.forEach((card) => {
         let xAxis = 0;
         let yAxis = 0;
         xAxis = (window.innerWidth / 1 - e.pageX) / 25;
-        yAxis = (window.innerHeight / 1 - e.pageX) / 25;
+        yAxis = (window.innerHeight / 1 - e.pageX) / 25; //dont have a yaxel if the cards are in comums, it will fudge everything
         card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`; // y and X axel is horesental and vertikal
         console.log(e.pageX, e.pageY);
     });
