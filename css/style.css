@@ -272,7 +272,7 @@ p {
     font-weight: bolder;
 }
 
-/* pop up servid card modal*/
+/* pop up card modal*/
 #card-modal-wrapper {
     position: fixed;
     top: 0;
@@ -284,6 +284,7 @@ p {
     display: none;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 .card-modal {
     width: 50%;
@@ -291,6 +292,9 @@ p {
     background-color: white;
     border-radius: 10px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 /* end card*/
 
