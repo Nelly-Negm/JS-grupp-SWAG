@@ -12,8 +12,10 @@ const profile = document.querySelector(".profile img"); //target the image to ma
 cards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
         //traking the mouse to rotate the card in different ddirections
-        let xAxis = (window.innerWidth / 1 - e.pageX) / 25;
-        let yAxis = (window.innerHeight / 1 - e.pageY) / 25;
+        let xAxis = 0;
+        let yAxis = 0;
+        xAxis = (window.innerWidth / 1 - e.pageX) / 25;
+        yAxis = (window.innerHeight / 1 - e.pageY) / 25;
         card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`; // y and X axel is horesental and vertikal
     });
     card.addEventListener("mouseenter", (e) => {
