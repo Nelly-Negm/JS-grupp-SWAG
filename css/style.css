@@ -142,9 +142,17 @@ p {
 /*header end*/
 
 /* card section */
-
-.wrapper {
+.card-section {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
     background-color: #585858;
+}
+.wrapper {
     padding: 2rem 2em;
     display: flex;
     flex-flow: row wrap;
@@ -222,6 +230,13 @@ img {
     display: none;
     justify-content: center;
     align-items: center;
+}
+.service-modal {
+    width: 50%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 /* end card*/
 
