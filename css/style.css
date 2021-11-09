@@ -1,5 +1,9 @@
 /* Generell Styling Start */
 
+*{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: rgb(241, 241, 241);
@@ -33,14 +37,22 @@ h1 {
     margin-left: 15px;
 }
 
+
+
+/* För telefon */
 @media screen and (max-width: 800px) {
     .link-wrapper {
-        display: none;
+       display: none;
     }
+ 
+    
     .nav-container {
-        padding-right: 10px;
-        padding-left: 20px;
-        padding-left: 5;
+        padding: 10px;
+    }
+    .nav-container a {
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 15px;
     }
     .menu-btn {
         position: relative;
@@ -109,6 +121,26 @@ h1 {
     }
 }
 
+
+/*nav dator*/
+
+.link-wrapper a {
+    margin: 10px 40px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 30px;
+    border: white 1px solid;
+    border-radius: 7px;
+    padding: 5px;
+    transition-duration: 0.5s;
+}
+.link-wrapper :hover {
+color: black;
+background-color: white;
+}
+
+
 /* navigerings bar end */
 
 /*header  */
@@ -122,6 +154,24 @@ h1 {
     object-fit: cover;
     position: relative;
 }
+
+@media screen and (max-width: 800px) {
+    #index-image img{
+        background-image: url(../img/image00001.jpeg);
+        background-position-y: -40px;
+        width: 100%;
+        height: 15vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        position: relative;
+    
+        }
+}
+
+
+
+
 /*information */
 .information-headline {
     background-color: black;
@@ -250,6 +300,7 @@ header {
     margin: 0;
     padding: 15px;
 }
+
 header h1 {
     margin: 0;
 }
