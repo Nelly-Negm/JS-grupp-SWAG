@@ -292,8 +292,22 @@ p {
     background-color: white;
     border-radius: 10px;
     text-align: center;
+}
+.card-modal-header {
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.card-modal-header,
+span {
+    padding-right: 5px;
+    padding-top: 2px;
+}
+
+#card-modal-content {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     align-content: center;
 }
 /* end card*/
