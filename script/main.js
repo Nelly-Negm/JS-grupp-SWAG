@@ -20,7 +20,7 @@ cards.forEach((card) => {
         //mouseenter is so it wont do anything wierd when on the card
         card.style.transition = "none";
         //Popout
-        profile.style.transform = "translateZ(200px) rotateZ(-45deg)"; //-45degre helps the angle with the 3d effect
+        profile.style.transform = "translateZ(200px) rotateZ(-45deg)"; //-making the rocks head do the happy loop
     });
     card.addEventListener("mouseleave", (e) => {
         // when mouse leave card, there is a 0.5s ease so i will look smother
@@ -30,3 +30,47 @@ cards.forEach((card) => {
         profile.style.transform = "translateZ(0px) rotateZ(0deg)";
     });
 });
+
+//service-modal  Card code
+const services = [
+    //the pop up information
+    {
+        name: "The Rock Jonsson",
+        content: "i like long walk on the beach, and whisky on the rock",
+    },
+    {
+        name: "Jonsson the Rock",
+        content: "anime is life, manga is my bread and butter",
+    },
+    {
+        name: "Rocky Jonsson",
+        content: "Wrestling and Acting is the same thing",
+    },
+    {
+        name: "CThe R.J",
+        content: "YOU CANT HANDLE THE THRUTH",
+    },
+];
+
+const closeServiceModal = () => {
+    document.getElementById("service-modal-wrapper").style.display = "none";
+};
+
+const openServiceModal = () => {
+    const cards = document.getElementsByClassName("card");
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", () => {
+            document.getElementById("service-modal-wrapper").style.display =
+                "flex";
+            for (let j = 0; j < services.length; j++) {
+                if (i === j) {
+                    document.getElementById(
+                        "service-modal-content"
+                    ).innerHTML = `<h2>${services[j].name}</h2><p>${services[j].content}</p>`;
+                }
+            }
+        });
+    }
+};
+
+window.addEventListener("load", openServiceModal);
