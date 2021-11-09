@@ -33,9 +33,9 @@ cards.forEach((card) => {
 
 //service-modal  Card code
 const services = [
-    //the pop up information
+    //the pop up information that will be showd
     {
-        name: "The Rock Jonsson",
+        name: "Sammy Boy",
         content: "i like long walk on the beach, and whisky on the rock",
     },
     {
@@ -47,17 +47,21 @@ const services = [
         content: "Wrestling and Acting is the same thing",
     },
     {
-        name: "CThe R.J",
+        name: "The R.J",
         content: "YOU CANT HANDLE THE THRUTH",
     },
 ];
 
 const closeServiceModal = () => {
-    document.getElementById("service-modal-wrapper").style.display = "none";
+    document.getElementById("service-modal-wrapper").style.display = "none"; //tagging that the modal will defalt not be shownd
 };
 
+/* börjar med att ha min modal i display none
+och sen när man klickar på den gula knappen börjar modal göra en for loop
+där den tar informationen från "servis" array
+och numreriskt tar upp modalen beroende vilket kort det är   */
 const openServiceModal = () => {
-    const cards = document.getElementsByClassName("card");
+    const cards = document.getElementsByClassName("get-to-know-me");
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", () => {
             document.getElementById("service-modal-wrapper").style.display =

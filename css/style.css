@@ -232,8 +232,7 @@ p {
     align-items: center;
     justify-content: center;
 }
-.profile,
-img {
+.profile img {
     width: 10rem;
     z-index: 2;
     transition: all 0.75s ease-out;
