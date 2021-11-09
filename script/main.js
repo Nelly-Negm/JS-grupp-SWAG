@@ -12,6 +12,7 @@ const profile = document.querySelector(".profile img"); //target the image to ma
 cards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
         //traking the mouse to rotate the card in different ddirections
+        //The yAxel is doing a x25 per card instead of doing a break...
         let xAxis = 0;
         let yAxis = 0;
         xAxis = (window.innerWidth / 1 - e.pageX) / 25;
