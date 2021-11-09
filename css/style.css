@@ -455,23 +455,23 @@ footer i {
     top: 50%;
     cursor: pointer;
     padding: 5px;
-    color: red;
-    background-color: yellow;
-    transform: scale(1.4, 1.4);
+    color: black;
+    background-color: white;
+    transform: scale(2, 2);
     transition-duration: 0.5s;
 }
-#prev-btn :hover,
+#prev-btn  :hover,
 #next-btn :hover {
-    background-color: red;
-    color: yellow;
-    
+    background-color: black;
+    color: white;
+    transition-duration: 0.5s;    
 }
 #prev-btn {
-    left: 5.5%;
+    left: 7%;
 }
 
 #next-btn {
-    right: 5.5%;
+    right: 7%;
 }
 
 @media screen and (max-width:800px){
