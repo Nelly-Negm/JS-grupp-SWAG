@@ -120,7 +120,7 @@ h1 {
 
 /*nav dator*/
 
-.link-wrapper a {
+.link-wrapper a, .link-wrapper-galeri a {
     margin: 10px 40px;
     font-size: 25px;
     text-decoration: none;
@@ -128,12 +128,23 @@ h1 {
     margin: 10px 30px;
     border: white 1px solid;
     border-radius: 7px;
-    padding: 5px;
+    padding: 5px 15px;
     transition-duration: 0.5s;
 }
-.link-wrapper :hover {
+
+#card-wrapper-galeri{
+padding: 7px 5vw;
+}
+
+.link-wrapper :hover, .link-wrapper-galeri :hover {
     color: black;
     background-color: white;
+}
+
+.link-wrapper{
+    position: absolute;
+    right: 32px;
+    top: 35px;
 }
 
 /* navigerings bar end */
@@ -292,9 +303,7 @@ header {
     padding: 15px;
 }
 
-.link-wrapper-galeri{
-    position: relative;
-}
+
 
 header h1 {
     margin: 0;
@@ -346,11 +355,17 @@ footer {
     background-color: #ffff00;
     padding: 20px;
     height: 60px;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 0;
 }
+footer a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+
 footer i {
     margin: 0 50px;
     transform: scale(2.5);
@@ -438,18 +453,19 @@ footer i {
 #prev-btn,
 #next-btn {
     position: absolute;
-    background-color: yellow;
     top: 50%;
     cursor: pointer;
     padding: 5px;
     color: red;
+    background-color: yellow;
     transform: scale(1.4, 1.4);
+    transition-duration: 0.5s;
 }
 #prev-btn :hover,
 #next-btn :hover {
     background-color: red;
     color: yellow;
-    transition-duration: 0.5s;
+    
 }
 #prev-btn {
     left: 5.5%;
@@ -458,6 +474,13 @@ footer i {
 #next-btn {
     right: 5.5%;
 }
+
+@media screen and (max-width:800px){
+    .modal-container{
+    height: 39vh;
+    }
+}
+
 
 /* Modal End */
 
