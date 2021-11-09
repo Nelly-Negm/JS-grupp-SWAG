@@ -16,8 +16,9 @@ cards.forEach((card) => {
         let xAxis = 0;
         let yAxis = 0;
         xAxis = (window.innerWidth / 1 - e.pageX) / 25;
-        yAxis = (window.innerHeight / 1 - e.pageY) / 25;
+        yAxis = (window.innerHeight / 1 - e.pageX) / 25;
         card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`; // y and X axel is horesental and vertikal
+        console.log(e.pageX, e.pageY);
     });
     card.addEventListener("mouseenter", (e) => {
         //mouseenter is so it wont do anything wierd when on the card
