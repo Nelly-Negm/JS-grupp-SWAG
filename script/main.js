@@ -40,18 +40,22 @@ const funQuote = [
     {
         name: "Sammy Boy",
         content: "i like long walk on the beach, and whisky on the rock",
+        picture: "rock-fanny-pack-dwayne-johnson-in-1989.png",
     },
     {
         name: "Jonsson the Rock",
         content: "anime is life, manga is my bread and butter",
+        picture: "rock-fanny-pack-dwayne-johnson-in-1989.png",
     },
     {
         name: "Rocky Jonsson",
         content: "Wrestling and Acting is the same thing",
+        picture: "rock-fanny-pack-dwayne-johnson-in-1989.png",
     },
     {
         name: "The R.J",
         content: "YOU CANT HANDLE THE THRUTH",
+        picture: "rock-fanny-pack-dwayne-johnson-in-1989.png",
     },
 ];
 //tagging that the modal will defalt not be shownd
@@ -73,7 +77,7 @@ const openCardModal = () => {
                 if (i === j) {
                     document.getElementById(
                         "card-modal-content"
-                    ).innerHTML = `<h2>${funQuote[j].name}</h2><p>${funQuote[j].content}</p>`;
+                    ).innerHTML = `<h2>${funQuote[j].name}</h2><p>${funQuote[j].content}</p><img src="./img/${funQuote[j].picture}">`;
                 }
             }
         });
