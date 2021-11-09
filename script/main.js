@@ -3,7 +3,7 @@
 
 //Movement Animation to happen
 const cards = document.querySelectorAll(".card"); //targeting all the cards
-const container = document.querySelector(".container"); //what on/in the cards
+//const container = document.querySelector(".container"); //what on/in the cards
 //Items
 
 const profile = document.querySelector(".profile img"); //target the image to make it rotate
