@@ -23,7 +23,7 @@ cards.forEach((card) => {
         //mouseenter is so it wont do anything wierd when on the card
         card.style.transition = "none";
         //Popout
-        profile.style.transform = "translateZ(200px) rotateZ(-45deg)"; //-making the rocks head do the happy loop
+        profile.style.transform = "translateZ(300px) rotateZ(45deg)"; //-making the rocks head do the happy loop
     });
     card.addEventListener("mouseleave", (e) => {
         // when mouse leave card, there is a 0.5s ease so i will look smother
