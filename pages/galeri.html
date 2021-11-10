@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
-    <title>King of SWAG galeri</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../img/swag_logo_vector_02.svg">
-    <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
+        <title>King of SWAG galeri</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="../img/swag_logo_vector_02.svg"
+        />
+        <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
+    </head>
+    <body>
+        <!-- Modal start-->
 
-</head>
-<body>
+        <div id="modal-wrapper">
+            <div class="modal-container">
+                <span onclick="prevBtnFunction()" id="prev-btn"
+                    ><i class="fa fa-chevron-left"></i
+                ></span>
+                <span onclick="nextBtnFunction()" id="next-btn"
+                    ><i class="fa fa-chevron-right"></i
+                ></span>
 
-
-    <!-- Modal start-->
-
-    <div id="modal-wrapper">
-        <div class="modal-container">
-
-            <span onclick="prevBtnFunction()" id="prev-btn"><i class="fa fa-chevron-left"></i></span>
-                <span onclick="nextBtnFunction()" id="next-btn"><i class="fa fa-chevron-right"></i></span>
-
-            <div class="modal-header">
-                <span onclick="closeModal()"><i class="fa fa-times"></i> </span>
-
+                <div class="modal-header">
+                    <span onclick="closeModal()"
+                        ><i class="fa fa-times"></i>
+                    </span>
+                </div>
+                <div id="modal-content">
+                    <img id="main-img" src="" />
+                </div>
             </div>
-            <div id="modal-content">
-                <img id="main-img" src="">
-            </div>
-              </div>
-
-    </div>
-
-    <!-- Modal End-->
-
-    <img id="logo" src="../img/swag_logo_vector_02.svg" alt="SWAG logo">
-    <header>
-        <h1>King of SWAG <br>GALERI</h1>
-        <div class="link-wrapper">
-            <a id="card-wrapper-galeri" href="../index.html">Go to cards</a>
         </div>
-    </header>
-    <section class="info-section">
-        <p>King of SWAG var den första tävlingen SWAG annordnade <br> <br> 
-        Följande är bilder från den fantastiska tävlingen.
-        </p>
-    </section>
-    <section class="galeri-section">
-        <img class="modal-img" src="../img/image00001.jpeg" alt="">
-        <img class="modal-img" src="../img/image00002.jpeg" alt="">
-        <img class="modal-img" src="../img/image00003.jpeg" alt="">
-        <img class="modal-img" src="../img/image00004.jpeg" alt="">
-        <img class="modal-img" src="../img/image00005.jpeg" alt="">
-    <!--
-        <img class="modal-img" src="../img/image00006.jpeg" alt="">
-        <img class="modal-img" src="../img/image00007.jpeg" alt="">
-        <img class="modal-img" src="../img/image00008.jpeg" alt="">
-        <img class="modal-img" src="../img/image00009.jpeg" alt="">
-        <img class="modal-img" src="../img/image00010.jpeg" alt="">
-        <img class="modal-img" src="../img/image00011.jpeg" alt="">
-        -->
 
-    </section>
-    <footer>
-        <a href="https://www.instagram.com/swag.gbg/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="mailto:lukas@not-my.mail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-    </footer>
-    <script src="../script/galeri.js"></script>
-</body>
+        <!-- Modal End-->
+
+        <img id="logo" src="../img/swag_logo_vector_02.svg" alt="SWAG logo" />
+        <header>
+            <h1>King of SWAG <br />GALERI</h1>
+            <div class="link-wrapper">
+                <a id="card-wrapper-galeri" href="../index.html">Go to cards</a>
+            </div>
+        </header>
+        <section class="info-section">
+            <p>
+                King of SWAG var den första tävlingen SWAG annordnade <br />
+                <br />
+                Följande är bilder från den fantastiska tävlingen.
+            </p>
+        </section>
+        <section class="galeri-section">
+            <img class="modal-img" src="../img/image00001.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00002.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00003.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00004.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00005.jpeg" alt="" />
+
+            <img class="modal-img" src="../img/image00006.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00007.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00008.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00009.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00010.jpeg" alt="" />
+            <img class="modal-img" src="../img/image00011.jpeg" alt="" />
+        </section>
+        <footer>
+            <a href="https://www.instagram.com/swag.gbg/"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a href="mailto:lukas@not-my.mail"
+                ><i class="fa fa-envelope" aria-hidden="true"></i
+            ></a>
+        </footer>
+        <script src="../script/galeri.js"></script>
+    </body>
 </html>
