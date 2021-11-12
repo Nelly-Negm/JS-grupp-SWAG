@@ -38,17 +38,13 @@ const images  = [
 
 //Prev next btn
 const mainImg = document.getElementById("main-img")
-// I inner HTML, i if satsen till modalen, lägger jag till ett element med id "main-img"
 
 const pictures = document.querySelectorAll(".modal-img");
 
-
-
-/*
-ANNAT PROBLEM: Att skriva in [i] var ej lösningen. Jag fann lösningen för förra problemet genom att ändra vad pictures[i].src
-skulle vara lika med, så nu aktiveras if satsen. Men mitt nya problem är att loopen slutar ju inte köra för att ifsatsen går igenom
-vilket för att i blir lika med lika många bilder jag har, så den hoppar till sista bilden. Dessutom får jag error när jag försöker 
-skriva [i - 1]  
+/* När man klickar på bakåtknappen körs en loop, för varje loopning kontrolleras om indexen för mainImg är samma
+som pictures (indexen för stora bilden === indexen för den lilla bilden ? ) om den är det ändras länken för stora 
+bilden till en ny länk, denna nya länk är pictures inxex - 1, vilket blir förgående bild.
+Om man är på mainImg index 0, alltså första bilden, byter den länken för mainImg till sista bilden.
 */
 const prevBtnFunction = () => {
     console.log(mainImg.src)
@@ -61,7 +57,10 @@ const prevBtnFunction = () => {
             }
         }
    } 
-
+   /* Fungerar som prevBtnFunction men byter mainImg länk till länken som finns på pictures index + 1. alltså nästa
+   bild. Om man är på sista bilden, alltså om pictures index src är lika med mainImg src på sista bilden så
+   byts mainImg src ut till första bildens src, alltså pictures index 0.
+    */
    const nextBtnFunction = () => {
         console.log(mainImg.src)
          for (let i = 0; i < pictures.length; i++){
@@ -75,6 +74,7 @@ const prevBtnFunction = () => {
 
    console.log(mainImg.src)
 
+   // modalens display ändras till none när man klickar på kryset.
 const closeModal = () => {
     document.querySelector("#modal-wrapper").style.display="none"
 }
@@ -82,7 +82,12 @@ const closeModal = () => {
 
 
 
-
+   /* När openModal körs körs en loop körs för att alla bilder ska targetas (så att något ska hända när man klickar på en av bilderna).
+    modalens display ändras till flex när man klickar på en billd. klickar man på en bild som har index 2 
+    så är i 2
+    När man klickar på en bild körs även nästa forloop. eftersom i = 2 just nu så körs forloopen tills j 
+    också är 2. Då sätts mainImg src till index 2 för images, vilket är mina länkar högre upp.
+   */
 const openModal = () => {
     for (let i = 0; i < pictures.length; i++){
         pictures[i].addEventListener("click", () => {
@@ -97,6 +102,8 @@ const openModal = () => {
         })
     }
 }
+// Eftersom det att alla bilder måste itereras innan man klickar på den måste openModal köras när
+// man laddar sidan. annars skulle inte alla bilder få eventlistenern. 
 
 openModal()
 
